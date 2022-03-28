@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { NavBar } from '../components/NavBar';
 import styles from '../styles/Home.module.css';
 
 export default function HomePage() {
@@ -17,6 +18,8 @@ export default function HomePage() {
       <Head> {/* Componente --> Head, modifica el <head></head> HTML */}
         <meta name='keywords' content='nicolas, huerta, curso, next-js' />
       </Head> { /* Este head, sobreescribe el primero */ }
+
+      <NavBar />
 
       <main className={styles.main}>
 
