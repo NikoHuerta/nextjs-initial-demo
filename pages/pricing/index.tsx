@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { MainLayout } from '../../components/layouts/MainLayout';
 
 
-export default function ContactPage() {
+export default function PricingPage() {
 
-  const pageName = 'Contact Page';
+  const pageName = 'Pricing Page';
 
   return (
-    <MainLayout>
+    <>
       <h1>{ pageName }</h1>        
         <h1 className={'title'}>
           Ir a <Link href="/">Home</Link>
@@ -16,8 +16,16 @@ export default function ContactPage() {
 
         <p className={'description'}>
           Get started by editing{' '}
-          <code className={'code'}>pages/index.js</code>
+          <code className={'code'}>pages/pricing/index.jsx</code>
         </p>
-    </MainLayout>
+    </>
   )
+}
+
+PricingPage.getLayout= function getLayout(page: JSX.Element) {
+  return (
+    <MainLayout >
+      { page }
+    </MainLayout>
+  );
 }
